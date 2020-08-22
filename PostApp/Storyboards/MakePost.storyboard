@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Make Post View Controller-->
+        <scene sceneID="p4K-Kg-fyc">
+            <objects>
+                <viewController storyboardIdentifier="MakePostViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NFH-w5-oMY" customClass="MakePostViewController" customModule="PostApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dtD-Cw-S1F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RsM-Ot-Yw0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RsM-Ot-Yw0" firstAttribute="top" secondItem="IWv-rQ-NhD" secondAttribute="top" id="brQ-sp-6Gb"/>
+                            <constraint firstItem="RsM-Ot-Yw0" firstAttribute="leading" secondItem="IWv-rQ-NhD" secondAttribute="leading" id="d9w-ce-Plj"/>
+                            <constraint firstItem="RsM-Ot-Yw0" firstAttribute="trailing" secondItem="IWv-rQ-NhD" secondAttribute="trailing" id="hbI-FS-32L"/>
+                            <constraint firstAttribute="bottom" secondItem="RsM-Ot-Yw0" secondAttribute="bottom" id="vv5-Jp-YQN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IWv-rQ-NhD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EgJ-AA-hxC">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="T3B-l7-KCO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="POj-Pb-39C">
+                                <rect key="frame" x="302" y="5" width="92" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="投稿する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="makePostTextView" destination="RsM-Ot-Yw0" id="Nr1-8Z-i5o"/>
+                        <outlet property="postButton" destination="POj-Pb-39C" id="LV5-1h-yZ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gH0-wC-cL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2836.2318840579715" y="-94.419642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2aL-gt-ouN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u8h-jY-kp8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G0g-il-t2O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NFH-w5-oMY" kind="relationship" relationship="rootViewController" id="7c9-eF-J4V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2T-IZ-4po" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3746.376811594203" y="-94.419642857142847"/>
+        </scene>
+    </scenes>
+</document>

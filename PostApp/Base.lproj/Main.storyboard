@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IlB-G7-dbI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Gp0-3g-VPY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IlB-G7-dbI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="d94-Hm-YJo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cv4-Mf-4PR" kind="relationship" relationship="rootViewController" id="CIP-D2-zuj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frr-iI-qsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1410" y="77"/>
+        </scene>
+        <!--投稿-->
+        <scene sceneID="iaC-Vj-Hor">
+            <objects>
+                <viewController id="Cv4-Mf-4PR" customClass="ViewController" customModule="PostApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cyJ-fD-ipW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFY-mX-dGv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="g41-rF-A51" kind="embed" id="BfP-kJ-gUM"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZQ-fa-saL">
+                                <rect key="frame" x="339" y="787" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tZQ-fa-saL" secondAttribute="height" multiplier="1:1" id="0dN-A2-4Mw"/>
+                                    <constraint firstAttribute="width" constant="60" id="up4-GP-31e"/>
+                                </constraints>
+                                <state key="normal" image="plus" backgroundImage="plus"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6RJ-32-Fnd" firstAttribute="trailing" secondItem="kFY-mX-dGv" secondAttribute="trailing" id="M1U-nM-MVK"/>
+                            <constraint firstItem="kFY-mX-dGv" firstAttribute="leading" secondItem="6RJ-32-Fnd" secondAttribute="leading" id="Mnb-Pt-Xoc"/>
+                            <constraint firstItem="6RJ-32-Fnd" firstAttribute="bottom" secondItem="tZQ-fa-saL" secondAttribute="bottom" constant="15" id="WW5-yw-Ys5"/>
+                            <constraint firstItem="6RJ-32-Fnd" firstAttribute="trailing" secondItem="tZQ-fa-saL" secondAttribute="trailing" constant="15" id="eJQ-TN-InM"/>
+                            <constraint firstItem="kFY-mX-dGv" firstAttribute="top" secondItem="6RJ-32-Fnd" secondAttribute="top" id="n39-br-GSJ"/>
+                            <constraint firstItem="6RJ-32-Fnd" firstAttribute="bottom" secondItem="kFY-mX-dGv" secondAttribute="bottom" id="rb5-KC-jTY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6RJ-32-Fnd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="投稿" largeTitleDisplayMode="always" id="76T-gl-38V"/>
+                    <connections>
+                        <outlet property="moveToAddPostViewButton" destination="tZQ-fa-saL" id="zlW-96-fr5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTF-a6-28K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="72"/>
+        </scene>
+        <!--Post List View Controller-->
+        <scene sceneID="dTt-M4-48Q">
+            <objects>
+                <viewController id="g41-rF-A51" customClass="PostListViewController" customModule="PostApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bej-Gh-7LT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="20s-97-9Qw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="20s-97-9Qw" secondAttribute="trailing" id="7HR-dt-3oy"/>
+                            <constraint firstItem="20s-97-9Qw" firstAttribute="leading" secondItem="bej-Gh-7LT" secondAttribute="leading" id="bJg-3W-90g"/>
+                            <constraint firstItem="20s-97-9Qw" firstAttribute="top" secondItem="bej-Gh-7LT" secondAttribute="top" id="miX-kq-dNz"/>
+                            <constraint firstAttribute="bottom" secondItem="20s-97-9Qw" secondAttribute="bottom" id="ucI-H0-XQS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BXE-Ny-IdT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W05-i1-6j3"/>
+                    <connections>
+                        <outlet property="postListTableView" destination="20s-97-9Qw" id="qlo-aY-7RP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaB-0z-Lyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" width="225" height="225"/>
+    </resources>
+</document>
